@@ -1,0 +1,35 @@
+{
+  "description": "Keyword weights for auto-scoring trending AI stories. Weights are applied when keywords appear in a story title or sum. Total weights equal 100. Higher weights indicate stronger relevance to the PerformOS audience.",
+  "weights": {
+    "agent": 12,
+    "agents": 12,
+    "automation": 8,
+    "AI inference": 7,
+    "artificial intelligence": 6,
+    "local models": 6,
+    "local_models": 6,
+    "llm": 10,
+    "GPU": 4,
+    "private AI": 5,
+    "private_ai": 5,
+    "Ollama": 4,
+    "Hermes": 4,
+    "GPT": 3,
+    "Claude": 3,
+    "Transformer": 1,
+    "fine-tuning": 1,
+    "quantization": 1,
+    "RAG": 1,
+    "embeddings": 1
+  },
+  "total": 100,
+  "scoring_rules": {
+    "base_score": 30,
+    "max_bonus_from_keywords": 60,
+    "sentiment_bonus_positive": 5,
+    "sentiment_bonus_neutral": 0,
+    "sentiment_bonus_negative": -5,
+    "topic_match_bonus": 5,
+    "explanation": "A story starts with a base score of 30. Keyword matches add up to 60 bonus points (capped). Sentiment adjusts by +5 (positive), 0 (neutral), or -5 (negative). Topic tags matching the user's watchlist add 5 bonus points. Final score is clamped to 1-100."
+  }
+}
